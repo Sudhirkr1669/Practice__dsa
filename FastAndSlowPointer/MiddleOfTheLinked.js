@@ -11,13 +11,18 @@ class middleNode{
    findMiddleNode(arr){
     let twice = 0;
     let once = 0;
-    for(let i = 0;i<arr.length;i+2){
-        twice = i+2;
-        once= i+1 ;
+    while(arr[twice]&&arr[twice]!=null){
+        twice = twice+2;
+        once=once+1 ;
     }
-    console.log(arr[once]);
+    if(arr.length%2===0){
+      console.log(arr[once]); 
+
+    }else{
+        console.log(arr[once-1])
+    }
    }
 }
-const arr=[1,23,4,5,6,7,8,8]
+const arr=[1,23,4,5]
 const result=new middleNode();
 const FinalResult=result.findMiddleNode(arr);

@@ -1,0 +1,2 @@
+What is Breadth First Search?
+Breadth first search is an algorithm for searching a tree or graph data structure. It begins at the root node then explores all nodes left to right, level by level. Breadth first search follows the FIFO (first in, first out) principle and can be implemented with a queue.
