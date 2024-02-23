@@ -37,7 +37,7 @@
 //       }
 //     }
 //   }
-  
+
 //   // Example usage:
 //   const arrayToSort = [3, 5, 2, 1, 4,1];
 //   cyclicSort(arrayToSort);
@@ -57,7 +57,6 @@
 //   console.log(sortedLeft);
 //   const sortedRight = mergeSort(rightHalf);
 //   console.log(sortedRight);
-
 
 //   // Merge the sorted halves
 //   return merge(sortedLeft, sortedRight);
@@ -103,19 +102,19 @@
 function cyclicSort(nums) {
   let i = 0;
   while (i < nums.length) {
-      const correctIndex = nums[i] - 1; // Correct index for nums[i]
-      if (nums[i] != nums[correctIndex]) {
-          // Swap nums[i] with nums[correctIndex]
-          [nums[i], nums[correctIndex]] = [nums[correctIndex], nums[i]];
-      } else {
-          i++; // Move to the next element
-      }
+    const correctIndex = nums[i]; // Correct index for nums[i]
+    if (nums[i] != nums[correctIndex]) {
+      // Swap nums[i] with nums[correctIndex]
+      [nums[i], nums[correctIndex]] = [nums[correctIndex], nums[i]];
+    } else {
+      i++; // Move to the next element
+    }
   }
   return nums;
 }
 
 // Example usage:
-const arr = [3,1,5, 4, 2];
+const arr = [3, 5, 4, 2];
 console.log("Original array:", arr);
 const sortedArr = cyclicSort(arr);
 console.log("Sorted array:", sortedArr);
